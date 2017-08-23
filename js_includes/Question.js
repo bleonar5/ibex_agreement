@@ -169,6 +169,7 @@ jqueryWidget: {
             var t = this;
             this.utils.setTimeout(function () {
                 var answerTime = new Date().getTime();
+                this.utils.setValueForNextElement("slow", true); 
                 t.setFlag(false);
                 t.finishedCallback([[[questionField, t.question ? csv_url_encode(t.question) : "NULL"],
                                      [answerField, "NULL"], [correctField, "NULL"],
@@ -266,5 +267,4 @@ properties: {
 });
 
 })();
-
 

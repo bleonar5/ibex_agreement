@@ -83,7 +83,7 @@ STATIC_FILES_DIR = "www"
 # is either the string "block" or the string "allow". The remainder
 # of the list gives the filenames of those js/css files which should
 # be allowed/blocked.
-JS_INCLUDES_LIST   = ["block","Question.js","AcceptabilityJudgment.js","Separator.js"]  # Block nothing (i.e. allow everything).
+JS_INCLUDES_LIST   = ["block"]  # Block nothing (i.e. allow everything).
 CSS_INCLUDES_LIST  = ["block"]  # Ditto.
 DATA_INCLUDES_LIST = ["block"]  # Ditto.
 

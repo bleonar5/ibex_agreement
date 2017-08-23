@@ -10,10 +10,12 @@ jqueryWidget: {
         this.finishedCallback = this.options._finishedCallback;
 
         this.ignoreFailure = dget(this.options, "ignoreFailure", false);
-        this.style = this.ignoreFailure ? "normal" : (this.utils.getValueFromPreviousElement("failed") ? "error" : "normal");
+        //this.style = this.ignoreFailure ? "normal" : (this.utils.getValueFromPreviousElement("failed") ? "error" : "normal");
+        this.style = this.ignoreFailure ? "normal" : (this.utils.getValueFromPreviousElement("slow") ? "slow" : (this.utils.getValueFromPreviousElement("failed") ? "error" : "normal"));
         var x = this.utils.getValueFromPreviousElement("style");
         if (x) this.style = x;
-        assert(this.style == "normal" || this.style == "error", "'style' property of Separator must either be 'normal' or 'error'");
+        //assert(this.style == "normal" || this.style == "error", "'style' property of Separator must either be 'normal' or 'error'");
+        assert(this.style == "normal" || this.style == "error" || this.style == "slow", "'style' property of Separator must be 'normal', 'error', or 'slow' ");
 
         this.transfer = dget(this.options, "transfer", "keypress");
         assert(this.transfer == "keypress" || typeof(this.transfer) == "number",
@@ -27,23 +29,33 @@ jqueryWidget: {
         var x = this.utils.getValueFromPreviousElement("errorMessage");
         if (x) error_message = x;
 
+
+        var slow_message = dget(this.options, "slowMessage", "Too slow!");
+        var x = this.utils.getValueFromPreviousElement("slowMessage");
+        if (x) slow_message = x;
+
         var p = $(document.createElement("p"));
         this.element.append(p);
         if (this.style == "error") {
             this.element.addClass(this.cssPrefix + "next-item-failure-message");
             p.text(error_message);
         }
+        else if (this.style == "slow") {
+            this.element.addClass(this.cssPrefix + "next-item-slow-message");
+            p.text(slow_message);
+        }
         else {
             this.element.addClass(this.cssPrefix + "next-item-message");
             p.text(normal_message);
         }
 
+
         if (this.transfer == "keypress") {
-	    var t = this;
-	    this.safeBind($(document), 'keydown', function () {
-		t.finishedCallback(null);
-		return false;
-	    });
+        var t = this;
+        this.safeBind($(document), 'keydown', function () {
+        t.finishedCallback(null);
+        return false;
+        });
         }
         else {
             var t = this;

@@ -4,7 +4,7 @@ var shuffleSequence = seq("setcounter","intro","beginning_of_practice", sepWith(
 var practiceItemTypes = ["practice"];
 
 var defaults = [
-    "SeparatorTX", {
+    "Separator", {
         slowMessage: "Too Slow!",
         normalMessage: "Correct!",
         errorMessage: "Incorrect."
@@ -32,7 +32,7 @@ var items = [
 
     ["practice_sep", "Separator", { transfer: 2000 }],    
     
-    ["sep", "SeparatorTX", { transfer: 1000 }],
+    ["sep", "Separator", { transfer: 1000 }],
 
     ["intro", "Form", {
         html: { include: "example_intro.html" },
