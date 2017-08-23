@@ -29,7 +29,7 @@ PORT = 3000
 # this won't happen).
 # ***** Relative to IBEX_WORKING_DIR unless absolute path. *****
 RESULT_FILES_DIR = "results"
-
+/Users/bleonard/my_ibex/js_includes/AcceptabilityJudgment.js
 # The name of the file where results will be stored (within
 # the RESULT_FILES_DIR directory).
 RESULT_FILE_NAME = "results"
