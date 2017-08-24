@@ -53,13 +53,13 @@ var items = [
                                            hasCorrect: 0}],
 
     ["practice", qcond, {s: "The dirty room", as: ["is", "are"],
-                                           hasCorrect: 1}],
+                                           hasCorrect: 0}],
     
     ["practice", qcond, {s: "The slow turtle", as: ["wants", "want"],
                                            hasCorrect: 0}],
     
     ["practice", qcond, {s: "A shower of colorful leaves", as: ["falls", "fall"],
-                                           hasCorrect: 1}],
+                                           hasCorrect: 0}],
 
     ["practice", qcond, {s: "The president of the company", as: ["sits", "sit"],
                                            hasCorrect: 0}],
