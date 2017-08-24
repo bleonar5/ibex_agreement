@@ -1,6 +1,10 @@
 .next-item-failure-message {
     color: red;
+    font-size:50;
+    float:center;
 }
 .next-item-message {
     font-style: italic;
+    font-size:50;
+    float:center;
 }
