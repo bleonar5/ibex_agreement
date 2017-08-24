@@ -12,6 +12,7 @@ var defaults = [
     "DashedAcceptabilityJudgment", {
         timeout:1500,
         mode:"self-paced reading",
+        presentHorizontally:true,
         showNumbers: true,
         hasCorrect: true,
         randomOrder:false,
