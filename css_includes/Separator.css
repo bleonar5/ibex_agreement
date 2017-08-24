@@ -5,6 +5,7 @@
 }
 .next-item-message {
     font-style: italic;
+    color:green;
     font-size:60;
     float:center;
 }
