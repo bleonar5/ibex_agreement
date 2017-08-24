@@ -9,12 +9,15 @@ var defaults = [
         normalMessage: "Correct!",
         errorMessage: "Incorrect."
     },
-    "AcceptabilityJudgmentTX", {
+    "DashedAcceptabilityJudgment", {
+        timeout:1500,
+        mode:"self-paced reading",
         showNumbers: true,
         hasCorrect: true,
+        randomOrder:false,
         leftComment: "", rightComment: ""
     },
-    "DashedAcceptabilityJudgment", {
+    "AcceptabilityJudgment", {
         showNumbers: true,
         hasCorrect: true,
         leftComment: "", rightComment: ""
@@ -26,7 +29,7 @@ var defaults = [
     }
 ];
 
-var qcond = "AcceptabilityJudgment";
+var qcond = "DashedAcceptabilityJudgment";
 
 var items = [
 
@@ -47,6 +50,18 @@ var items = [
                                            hasCorrect: 1}],
 
     ["practice", qcond, {s: "The picture of the prominent politician", as: ["hangs", "hang"],
+                                           hasCorrect: 0}],
+
+    ["practice", qcond, {s: "The dirty room", as: ["is", "are"],
+                                           hasCorrect: 1}],
+    
+    ["practice", qcond, {s: "The slow turtle", as: ["wants", "want"],
+                                           hasCorrect: 0}],
+    
+    ["practice", qcond, {s: "A shower of colorful leaves", as: ["falls", "fall"],
+                                           hasCorrect: 1}],
+
+    ["practice", qcond, {s: "The president of the company", as: ["sits", "sit"],
                                            hasCorrect: 0}],
 
     ["practice", qcond, {s: "I haven't yet met the professors who", as: ["is", "are"],

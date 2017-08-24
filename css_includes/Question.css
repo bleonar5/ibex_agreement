@@ -2,6 +2,9 @@
     margin-left: 0;
     padding-left: 0;
 }
+.Question-normal-answer {
+	font-size: 70pt;
+}
 .instructions-text {
     font-style: italic;
     clear: left;
@@ -10,6 +13,7 @@
 }
 li.normal-answer {
     text-align: left;
+    font-size:50;
     cursor: pointer;
     padding-bottom: 1em;
 }
