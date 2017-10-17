@@ -1,6 +1,7 @@
 .sentence {
      background-color: white;
      clear: both;
+     font-size:60pt;
 }
 .question {
      padding-left: 0.6em;
@@ -30,7 +31,7 @@
     foreground: white;
     text-align: center;
     display: table;
-    font-size: 20px;
+    font-size: 60px;
     padding-top: 1em;
     padding-bottom: 1em;
     padding-left: 2em;

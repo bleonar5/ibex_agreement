@@ -11,7 +11,10 @@ var defaults = [
     },
     "DashedAcceptabilityJudgment", {
         timeout:1500,
-        mode:"self-paced reading",
+        mode:"speeded acceptability",
+	display:"in place",
+	wordTime:300,
+	wordPauseTime:100,
         showNumbers: true,
         hasCorrect: true,
         randomOrder:false,
